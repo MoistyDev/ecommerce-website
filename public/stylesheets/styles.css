@@ -1,4 +1,72 @@
-/* TODO: Remove the sample code to test the CSS is correctly linked  */
-body {
-    background-color: aqua;
+html {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.navbar {
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.content .carousel {
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.content .carousel-control {
+    background-color: rgb(235, 229, 229);
+    border-radius: 5px;
+}
+
+.content .carousel-caption {
+    background-color: rgba(235, 229, 229, 0.5);
+    color: black;
+}
+
+.content .brand-logo {
+    width: 150px;
+    height: auto;
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(235, 229, 229, 0.5);
+    border-radius: 5px;
+}
+
+.content .brand-logo:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: rgb(235, 229, 229);
+}
+
+.icons a img {
+    height: auto;
+    margin-right: 1rem;
+    width: 1rem;
+}
+
+.icons a:hover {
+    filter: opacity(0.6);
+}
+
+.content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.content .item {
+    background-color: bisque;
+    margin: 0.5rem;
+    height: 200px;
+    width: 200px;
 }

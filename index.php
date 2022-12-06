@@ -1,20 +1,81 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique en ligne</title>
-    <link rel="stylesheet" href="./public/stylesheets/styles.css">
-    <script type="module" src="./public/javascripts/app.js"></script>
-</head>
-<body>
-    <h1>Boutique en ligne</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nobis autem ratione commodi quod accusantium deserunt reprehenderit incidunt fuga! Magni facilis saepe accusantium ad tempore enim maiores minus non? Iure.</p> 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nobis repellat ea quaerat voluptatum laboriosam delectus atque exercitationem, accusamus tempore aperiam quis, quod molestias autem rem! Autem cumque fuga perferendis.
-        Reiciendis nesciunt ipsum iure pariatur quisquam sapiente impedit a tempora quia sit cum tempore rerum quod, quos asperiores? Aspernatur sequi reprehenderit numquam quas sapiente atque! Autem et veniam quis. Quasi!
-        Incidunt aut porro non tempore tempora unde, natus aspernatur fugit doloribus excepturi, impedit ad facilis alias minus dicta sed libero facere autem qui accusamus. Eos perspiciatis quae necessitatibus ex tempore?
-    </p>
-</body>
-</html>
+<?php
+    require_once "includes/functions/database.php";
+
+    $db = db_connect();
+    $products = db_query($db, "select * from product");
+    //$allTypesResult = db_query($db, "select * from type");
+?>
+
+<?php require_once "includes/layouts/shared/header.php" ?>
+
+<div class="content">
+    <h3 class="title text-center">Our top sellers</h3>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <?php
+            while($row = pg_fetch_assoc($products)) {
+        ?>
+            <div class="carousel-item <? if ($row['product_id'] == 1) echo "active"?>">
+                <a href="">
+                    <img src="<?=$row['image_url'] ?>" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><?=$row['name']?></h5>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <h5 class="title text-center">Our Top Brands</h5>
+    <div class="top-brands d-flex justify-content-around">
+        <div class="row brands">
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/hagen-tr.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/higgins-tr.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/zoo-max-tr.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/puur-tr.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/roudybush-tr.png" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="">
+                    <img class="brand-logo" src="/public/images/lafeber.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php require_once "includes/layouts/shared/footer.php" ?>
+<?php pg_close($db); ?>

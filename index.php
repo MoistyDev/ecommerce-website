@@ -23,7 +23,7 @@
             while($row = pg_fetch_assoc($products)) {
         ?>
             <div class="carousel-item <? if ($row['product_id'] == 1) echo "active"?>">
-                <a href="">
+                <a href="product.php?product_id=<?=$row['product_id']?>">
                     <img src="<?=$row['image_url'] ?>" alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block">

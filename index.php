@@ -2,8 +2,10 @@
     require_once "includes/functions/database.php";
 
     $db = db_connect();
-    $products = db_query($db, "select * from product");
-    //$allTypesResult = db_query($db, "select * from type");
+    $products = db_query($db, 
+    "select * from product p 
+    join top_product tp on tp.product_id = p.product_id 
+    where p.product_id in (select * from top_product)");
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>

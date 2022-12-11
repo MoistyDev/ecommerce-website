@@ -1,6 +1,5 @@
-html {
-    height: 400px;
-    overflow-y: auto;
+.content {
+    min-height: 10rem;
 }
 
 .navbar {
@@ -59,7 +58,8 @@ html {
 }
 
 .footer {
-    margin-top: 3rem;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
     padding: 1rem;
     background-color: rgb(235, 229, 229);
 }

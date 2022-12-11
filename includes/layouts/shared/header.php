@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="cart">
-          <a class="shopping-cart-logo" href="">
+          <a class="shopping-cart-logo" href="/cart.php">
             <img src="/public/images/shopping_cart.png" alt="">
           </a>
         </div>

@@ -25,10 +25,10 @@
                 <div class="row shopping-options">
                     <div class="col-3 quantity-to-buy">
                         <label for="quantity">Quantity :</label>
-                        <input type="number" class="quantity" name="quantity" min="1"> 
+                        <input type="number" class="quantity" name="quantity" min="1" value="1"> 
                     </div>
                     <div class="col-3 text-center add-to-cart">
-                        <a href="">
+                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" href="" >
                             <img src="/public/images/add_to_cart.png" alt="">
                         </a>
                     </div>

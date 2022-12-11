@@ -8,6 +8,16 @@ html {
     margin-bottom: 2rem;
 }
 
+.navbar .cart {
+    padding-right: 2rem;
+}
+
+.navbar .shopping-cart-logo img{
+    padding-top: 0.5rem;
+    width: auto;
+    height: 40px;
+}
+
 .title {
     padding-top: 1rem;
     padding-bottom: 1rem;

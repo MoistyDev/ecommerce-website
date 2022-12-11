@@ -19,9 +19,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        <a class="nav-link" href="/shop.php">Shop</a>
+        <div class="home">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        </div>
+        <div class="shop">
+          <a class="nav-link" href="/shop.php">Shop</a>
+        </div>
       </div>
     </div>
+    <div class="cart">
+          <a class="shopping-cart-logo" href="">
+            <img src="/public/images/shopping_cart.png" alt="">
+          </a>
+        </div>
   </div>
 </nav>

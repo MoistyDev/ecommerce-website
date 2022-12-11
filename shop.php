@@ -15,7 +15,7 @@
             while ($row = pg_fetch_assoc($products)) {
 
         ?> 
-            <a href="product.php?product_id=<?=$row['product_id']?>">
+            <a data-product-id="<?=$row['product_id']?>" href="product.php?product_id=<?=$row['product_id']?>">
                 <div class="col item">
                     <div class="row item-info">
                         <div class="item-img text-center">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="row">
                         <div class="add-button text-center">
-                        <a href="">
+                        <a data-add-cart="button" data-product-id="<?=$row['product_id']?>" href="">
                             <img src="/public/images/add_to_cart.png" alt="">
                         </a>
                     </div>

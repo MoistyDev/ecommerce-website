@@ -17,6 +17,20 @@ function initRemoveListeners() {
     }
 }
 
+function initQuantityInputListeners() {
+    const FIELDS = document.querySelectorAll(['[data-quantity-input]']);
+    for (let field of FIELDS) {
+        field.addEventListener("change", function() {
+            console.log(event.target.closest("[data-product-id]"));
+            let index = CART.findIndex(object => {
+                return object.id === event.target.closest("[data-product-id]").getAttribute("data-product-id");
+            });
+            CART[index].quantityOfProduct = field.value;
+            localStorage.setItem('shoppingCart', JSON.stringify(CART));
+        });
+    }
+}
+
 function removeProduct(productId) {
     let index = CART.findIndex(object => {
         return object.id === productId;
@@ -40,10 +54,10 @@ function addProducts() {
                     <div class="row shopping-options">
                         <div class="col-3 quantity-to-buy">
                             <label for="quantity">Quantity :</label>
-                            <input data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantityOfProduct}"> 
+                            <input data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantityOfProduct}"> 
                         </div>
                         <div class="col-3 text-center cart-button remove-from-cart">
-                            <a data-cart-button="remove-from-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-product-quantity="1" href="" >
+                            <a data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.productName}" data-product-image="${product.image}" data-product-quantity="1" href="" >
                                 <img src="/public/images/remove_from_cart.png" alt="">
                             </a>
                         </div>
@@ -56,4 +70,5 @@ function addProducts() {
 }
 
 addProducts();
-initRemoveListeners()
+initRemoveListeners();
+initQuantityInputListeners();

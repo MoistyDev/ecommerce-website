@@ -94,11 +94,6 @@
     
 }
 
-.content .products {
-    display: flex;
-    justify-content: center;
-}
-
 .content .products img {
     padding-bottom: 0.8rem;
 }
@@ -106,6 +101,10 @@
 .content .products a{
     text-decoration: none;
     color: black;
+}
+
+.content .item .item-info {
+    height: 18rem;
 }
 
 .content .item img {
@@ -122,11 +121,7 @@
     padding-top: 0.5rem;
     font-size: medium;
     font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.content .item .item-info {
-    height: 20rem;
+    margin-bottom: 1rem;
 }
 
 .content .item .add-button {

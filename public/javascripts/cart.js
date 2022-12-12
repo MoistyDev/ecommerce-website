@@ -42,7 +42,7 @@ function removeProduct(productId) {
 function addProducts() {
     for (let product of CART) {
         htmlElem.innerHTML += `
-        <div class="product justify-content-center">
+        <div class="cart-product justify-content-center">
             <div class="row">
                 <div class="col-3 product-image">
                     <img class="cart-img" src="${product.image}" alt="">

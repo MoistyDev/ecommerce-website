@@ -33,7 +33,7 @@
                     </div>
                     <div class="row">
                         <div class="add-button text-center">
-                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-quantity-input="1" href="">
+                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
                             <img src="/public/images/add_to_cart.png" alt="">
                         </a>
                     </div>

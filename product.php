@@ -28,7 +28,7 @@
                         <input data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="1"> 
                     </div>
                     <div class="col-3 text-center add-to-cart">
-                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-quantity="1" href="" >
+                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-product-quantity="1" href="" >
                             <img src="/public/images/add_to_cart.png" alt="">
                         </a>
                     </div>

@@ -1,8 +1,8 @@
 let CART;
 if (JSON.parse(localStorage.getItem('shoppingCart')) != null) {
-    CART = new Map(JSON.parse(localStorage.getItem('shoppingCart')));
+    CART = (JSON.parse(localStorage.getItem('shoppingCart')));
 } else {
-    CART = new Map ();
+    CART = [];
 }
 
 function initCartButtonListeners() {
@@ -10,32 +10,60 @@ function initCartButtonListeners() {
     for (let button of BUTTONS) {
         button.addEventListener('click', function() {
             event.preventDefault();
-            addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), document.querySelector('[data-quantity-input]').value);
+            addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), event.target.closest("[data-product-name]").getAttribute("data-product-name"), event.target.closest("[data-product-image]").getAttribute("data-product-image"), document.querySelector('[data-quantity-input]').value);
         });
     }
 }
 
-function addToCart(product_id, quantity) {
+function addToCart(product_id, name, imageUrl, quantity) {
     console.log(parseInt(quantity));
+    let product;
+    let productAlreadyExists = false;
     if (quantity != null) {
-        if (CART.has(parseInt(product_id))) {
-            CART.set(parseInt(product_id), parseInt(CART.get(parseInt(product_id)) + parseInt(quantity)));
-        } else {
-            CART.set(parseInt(product_id), parseInt(quantity));
+        product = {
+            id : product_id,
+            productName: name,
+            image : imageUrl,
+            quantityOfProduct : quantity
         }
     } else {
-        if (CART.has(parseInt(product_id))) {
-            CART.set(parseInt(product_id), parseInt(CART.get(parseInt(product_id)) + 1));
-        } else {
-            CART.set(parseInt(product_id), parseInt(1));
+         product = {
+            id : product_id,
+            productName: name,
+            image : imageUrl,
+            quantityOfProduct : 1
         }
     }
-    localStorage.clear();
-    localStorage.setItem('shoppingCart', JSON.stringify(Array.from(CART.entries())));
-}
-
-function loadCartElements() {
     
+    for (let item of CART) {
+        if (item.id === product_id) {
+            productAlreadyExists = true;
+        }
+    }
+
+    if (quantity != null) {
+        if (productAlreadyExists) {
+            let index = CART.findIndex(object => {
+                return object.id === product_id;
+            });
+    
+            CART[index].quantityOfProduct = parseInt(parseInt(CART[index].quantityOfProduct) + parseInt(quantity));
+        } else {
+            CART.push(product);
+        }
+    } else {
+        if (productAlreadyExists) {
+            let index = CART.findIndex(object => {
+                return object.id === product_id;
+            });
+    
+            CART[index].quantityOfProduct = parseInt(parseInt(CART[index].quantityOfProduct) + 1);
+        } else {
+            CART.push(product);
+        }
+    }
+
+    localStorage.setItem('shoppingCart', JSON.stringify(CART));
 }
 
 initCartButtonListeners();

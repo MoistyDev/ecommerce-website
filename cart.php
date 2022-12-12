@@ -6,6 +6,8 @@
 
 <?php require_once "includes/layouts/shared/header.php" ?>
 
+<h1 class="text-center title">Your Cart</h1>
+
 <div class="content">
     <div data-cart-body="" class="cart">
         

@@ -1,0 +1,14 @@
+.content .cart-img {
+    height: auto;
+    width: 20rem;
+}
+
+.content .product-image {
+    border-right: 2px solid grey;
+}
+
+.content .product {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 1rem;
+}

@@ -26,15 +26,22 @@
     padding-top: 0.8rem;
 }
 
-.product .add-to-cart {
-    background-color: rgb(4, 219, 4);
+.product .cart-button {
     border-radius: 5px;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     border: 3px solid transparent;
 }
 
-.product .add-to-cart:hover {
+.product .add-to-cart {
+    background-color: rgb(4, 219, 4);
+}
+
+.product .remove-from-cart {
+    background-color: rgb(165, 2, 2);
+}
+
+.product .cart-button:hover {
     filter: contrast(50%);
     border: 3px solid black;
 }

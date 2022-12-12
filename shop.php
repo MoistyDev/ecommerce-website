@@ -10,14 +10,15 @@
 <h3 class="title text-center">Shop All</h3>
 <div class="content">
     <div class="products">
-        <div class="row row-cols-auto">
+        <div class="row row-cols-auto justify-content-center">
         <?php
             while ($row = pg_fetch_assoc($products)) {
 
         ?> 
-            <a data-product-id="<?=$row['product_id']?>" href="product.php?product_id=<?=$row['product_id']?>">
-                <div class="col item">
-                    <div class="row item-info">
+            
+            <div class="col item">
+                <div class="row item-info">
+                    <a data-product-id="<?=$row['product_id']?>" href="product.php?product_id=<?=$row['product_id']?>">
                         <div class="item-img text-center">
                             <img class="item-img" src="<?=$row['image_url'] ?>" alt="">
                         </div>
@@ -30,16 +31,17 @@
                         <div class="item-price">
                             <p class="text-center"><?=$row['price']?> $</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="add-button text-center">
-                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
-                            <img src="/public/images/add_to_cart.png" alt="">
-                        </a>
-                    </div>
-                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="add-button text-center">
+                            <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
+                                <img src="/public/images/add_to_cart.png" alt="">
+                            </a>
+                        </div>
+                    </a>
+                    
                 </div>
-            </a>
+            </div>
         <?php } ?>
         </div>
     </div>

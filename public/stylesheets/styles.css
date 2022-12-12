@@ -97,7 +97,6 @@
 .content .products {
     display: flex;
     justify-content: center;
-    margin-left: 2rem;
 }
 
 .content .products img {

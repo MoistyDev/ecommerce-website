@@ -5,8 +5,9 @@
     if (empty($_POST['searchInput'])) {
         $products = db_query($db, "select * from product p");
     } else {
-        
-        $sql = "select * from product where name LIKE ".$_POST['searchInput'];
+        $search = $_POST['searchInput'];
+        $searchLower = strtolower($search);
+        $sql = "select * from product where name ^@ '{$search}' or lower(name) ^@ '{$searchLower}'";
         $products = db_query($db, $sql);
     }
 ?>

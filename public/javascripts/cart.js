@@ -35,14 +35,16 @@ function removeProduct(productId) {
     let index = CART.findIndex(object => {
         return object.id === productId;
     });
-    CART.splice(index);
+
+    console.log(index);
+    CART.splice(index, 1);
     localStorage.setItem('shoppingCart', JSON.stringify(CART));
 }
 
 function addProducts() {
     for (let product of CART) {
         htmlElem.innerHTML += `
-        <div class="cart-product justify-content-center">
+        <div class="product justify-content-center">
             <div class="row">
                 <div class="col-3 product-image">
                     <img class="cart-img" src="${product.image}" alt="">

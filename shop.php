@@ -7,7 +7,8 @@
     } else {
         $search = $_POST['searchInput'];
         $searchLower = strtolower($search);
-        $sql = "select * from product where name ^@ '{$search}' or lower(name) ^@ '{$searchLower}'";
+        $searchUpper = strtoupper($search);
+        $sql = "select * from product where name ^@ '{$search}' or lower(name) ^@ '{$searchLower}' or upper(name) ^@ '{$searchUpper}'";
         $products = db_query($db, $sql);
     }
 ?>

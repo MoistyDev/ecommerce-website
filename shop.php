@@ -2,7 +2,13 @@
     require_once "includes/functions/database.php";
 
     $db = db_connect();
-    $products = db_query($db, "select * from product p");
+    if (empty($_POST['searchInput'])) {
+        $products = db_query($db, "select * from product p");
+    } else {
+        
+        $sql = "select * from product where name LIKE "'".$_POST['searchInput''"];
+        $products = db_query($db, $sql);
+    }
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>
@@ -42,7 +48,6 @@
         <?php } ?>
         </div>
     </div>
+    <?php require_once "includes/layouts/shared/footer.php" ?>
 </div>
-
-<?php require_once "includes/layouts/shared/footer.php" ?>
 <?php pg_close($db); ?>

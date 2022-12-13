@@ -77,7 +77,8 @@
             </div>
         </div>
     </div>
+    <?php require_once "includes/layouts/shared/footer.php" ?>
 </div>
 
-<?php require_once "includes/layouts/shared/footer.php" ?>
+
 <?php pg_close($db); ?>

@@ -6,7 +6,7 @@
         $products = db_query($db, "select * from product p");
     } else {
         
-        $sql = "select * from product where name LIKE "'".$_POST['searchInput''"];
+        $sql = "select * from product where name LIKE ".$_POST['searchInput'];
         $products = db_query($db, $sql);
     }
 ?>

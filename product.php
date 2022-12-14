@@ -4,12 +4,11 @@
     $db = db_connect();
     $product = db_query($db, "select * from product p where product_id = " .$_GET['product_id']);
 ?>
-
 <?php require_once "includes/layouts/shared/header.php" ?>
-
 <?php $row = pg_fetch_assoc($product) ?>
 
 <div class="content">
+    <?php require_once "includes/layouts/shared/navbar.php" ?>
     <div class="product">
         <div class="row">
             <div class="col-6 image">
@@ -36,7 +35,6 @@
             </div>
         </div>
     </div>
-    
 </div>
 
 <?php require_once "includes/layouts/shared/footer.php" ?>

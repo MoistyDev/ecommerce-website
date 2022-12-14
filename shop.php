@@ -12,18 +12,17 @@
         $products = db_query($db, $sql);
     }
 ?>
-
 <?php require_once "includes/layouts/shared/header.php" ?>
 
-<h3 class="title text-center">Shop All</h3>
 <div class="content">
+    <?php require_once "includes/layouts/shared/navbar.php" ?>
+    <h3 class="title text-center">Shop All</h3>
     <div class="products">
         <div class="row row-cols-auto justify-content-center">
         <?php
             while ($row = pg_fetch_assoc($products)) {
 
         ?> 
-            
             <div class="col item">
                 <div class="row item-info">
                     <a data-product-id="<?=$row['product_id']?>" href="product.php?product_id=<?=$row['product_id']?>">
@@ -37,13 +36,13 @@
                             <p class="item-description text-center"><?=$row['description']?></p>
                         </div>
                         </div>
-                        <div class="row">
-                            <p class="item-price text-center"><?=$row['price']?> $</p>
-                            <div class="add-button text-center">
-                            <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
+                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
+                            <div class="row">
+                                <p class="item-price text-center"><?=$row['price']?> $</p>
+                                <div class="add-button text-center">
                                 <img src="/public/images/add_to_cart.png" alt="">
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </a>
                 </div>
             </div>

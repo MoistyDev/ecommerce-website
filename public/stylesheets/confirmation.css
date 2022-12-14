@@ -1,0 +1,20 @@
+.question {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.confirm-option {
+    color: black;
+}
+
+.confirm-option-link {
+    text-decoration: none;
+}
+
+.confirm:hover {
+    color: green;
+}
+
+.cancel:hover {
+    color: red;
+}

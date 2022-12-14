@@ -1,0 +1,93 @@
+@media only screen and (max-width: 767px) {
+    .content input {
+        max-width: 12rem;
+    }
+}
+
+:root {
+    --body-background-color: #202124;
+    --content-background-color: #303134;
+    --text-color: #f6f6f6;
+    --textfield-background-color: #e3e4e6;
+    --label-background-color: #6c757d;
+}
+
+.content h1, h5 {
+    margin-bottom: 2.5rem;
+}
+
+.content .input-group {
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+.navbar .search-bar {
+    padding-top: 1.5rem;
+}
+
+.content .input-group-text {
+    color: var(--text-color);
+    background-color: var(--label-background-color);
+    border: 1px solid black;
+}
+
+.content input {
+    color: black;
+    background-color: var(--textfield-background-color);
+    border: 1px solid black;
+}
+
+.content input:focus {
+    color: black;
+    background-color: var(--textfield-background-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.content .input-group {
+    white-space: nowrap;
+}
+
+.content .btn-group {
+    margin-bottom: 1.5rem;
+}
+
+.content .address {
+    width: 15rem;
+}
+
+.content .city {
+    width: 10rem;
+}
+
+.content .postal-code {
+    width: 5.1rem;
+}
+
+.content .name {
+    width: 15rem;
+}
+
+.content .email {
+    width: 20rem;
+}
+
+.content .submit {
+    margin-top: 3rem;
+    background-color: var(--label-background-color);
+    color: var(--text-color);
+}
+
+.content .submit:hover {
+    background-color: var(--label-background-color);
+    filter: opacity(75%);
+}
+

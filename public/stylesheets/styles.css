@@ -3,12 +3,22 @@
         padding-bottom: 1rem;
     }
 
-    .navbar .shop {
-        padding-bottom: 1rem;
+    .navbar .cart {
+        display: none;
+    }
+
+    .navbar .cart-text {
+        display: block;
     }
 
     .navbar .search-bar {
-        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+@media (min-width: 991px) {
+    .navbar .cart-text {
+        display: none;
     }
 }
 
@@ -56,7 +66,7 @@ html, body {
 
 .content .carousel {
     height: auto;
-    width: 500px;
+    width: 32rem;
     margin: 0 auto;
     margin-bottom: 3rem;
 }
@@ -107,12 +117,6 @@ html, body {
 .icons a:hover {
     filter: opacity(0.6);
 }
-
-.content {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
 
 .content .item {
     margin: 2rem;

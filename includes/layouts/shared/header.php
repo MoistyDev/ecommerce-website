@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique en ligne</title>
+    <link rel="stylesheet" href="./public/stylesheets/navbar.css">
+    <link rel="stylesheet" href="./public/stylesheets/footer.css">
     <link rel="stylesheet" href="./public/stylesheets/styles.css">
     <link rel="stylesheet" href="./public/stylesheets/product.css">
     <link rel="stylesheet" href="./public/stylesheets/cart.css">
     <link rel="stylesheet" href="./public/stylesheets/confirmation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300&display=swap" rel="stylesheet">
 
     <?php
       if ($_SERVER['REQUEST_URI'] == '/form.php') echo '<link rel="stylesheet" href="./public/stylesheets/form.css">'

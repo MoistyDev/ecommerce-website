@@ -1,0 +1,99 @@
+:root {
+    --main-color: #f48c8c;
+    --text-color: white;
+    --text-hover: #fac6c6;
+}
+
+@media (max-width: 990px) {
+    .navbar {
+        margin-bottom: 3rem !important;
+    }
+
+    .navbar .collapse {
+        padding-bottom: 1rem;
+        margin-top: 0rem;
+    }
+
+    .navbar .navbar-brand {
+        padding-bottom: 1rem;
+    }
+
+    .navbar .cart {
+        display: none;
+    }
+
+    .navbar .cart-text {
+        display: block;
+    }
+
+    .navbar .nav-link {
+        margin-left: 1rem;
+    }
+
+    .navbar .search-bar {
+        margin-left: 1rem;
+    }
+
+    .navbar .navbar-toggler {
+        margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        background-color: #f6a3a3;
+    }
+}
+
+@media (min-width: 991px) {
+    .navbar .cart-text {
+        display: none;
+    }
+
+    .navbar .navbar-brand, .collapse {
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.navbar {
+    height: 5rem;
+    margin-bottom: 2rem;
+    color: white;
+    background-color: var(--main-color);
+    z-index: 9999;
+}
+
+.container-fluid {
+    background-color: var(--main-color);
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.navbar .navbar-brand img {
+    height: auto;
+    width: 6rem;
+}
+
+.navbar .navbar-item {
+    padding-right: 1rem;
+}
+
+.navbar .nav-link {
+    color: var(--text-color);
+}
+
+.navbar .nav-link:hover {
+    color: var(--text-hover);
+}
+
+.navbar .search-button {
+    margin-right: 2rem;
+}
+
+.navbar .shopping-cart-logo img{
+    padding-top: 0.2rem;
+    margin-right: 1rem;
+    width: auto;
+    height: 2.5rem;
+    filter: invert();
+}
+
+.navbar .shopping-cart-logo:hover {
+    filter: contrast(75%);
+}

@@ -19,8 +19,7 @@
         </div>
     </a>
 
-    <?php require_once "includes/layouts/shared/footer.php" ?>
+    <?php require_once "includes/layouts/shared/footerbar.php" ?>
 </div>
-
-
+<?php require_once "includes/layouts/shared/footer.php" ?>
 <?php pg_close($db); ?>

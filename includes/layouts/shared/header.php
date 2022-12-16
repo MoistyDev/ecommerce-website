@@ -26,10 +26,6 @@
       if ($_SERVER['REQUEST_URI'] == '/form.php') echo '<script type="module" src="./public/javascripts/form.js"></script>'
     ?>
 
-    <?php
-      if ($_SERVER['REQUEST_URI'] == '/confirmation.php?firstname=firstname&secondname=secondname&email=email&country=country&address=address&city=city&postalcode=postalcode') echo '<script type="module" src="./public/javascripts/confirmation.js"></script>'
-    ?>
-
 </head>
 <body>
 

@@ -82,12 +82,24 @@ input[type=number] {
 
 .content .submit {
     margin-top: 3rem;
-    background-color: var(--label-background-color);
     color: var(--text-color);
 }
 
-.content .submit:hover {
+
+.content .confirm-form {
     background-color: var(--label-background-color);
-    filter: opacity(75%);
 }
 
+.content .confirm-order {
+    background-color: green;
+}
+
+.error {
+    padding-left: 0.5rem;
+    color: red;
+}
+
+.verified {
+    padding-left: 0.5rem;
+    color : green;
+}

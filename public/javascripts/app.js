@@ -9,29 +9,32 @@ function initCartButtonListeners() {
     const BUTTONS = document.querySelectorAll('[data-cart-button="add-to-cart"]');
     for (let button of BUTTONS) {
         button.addEventListener('click', function() {
+            console.log("test");
             event.preventDefault();
-            addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), event.target.closest("[data-product-name]").getAttribute("data-product-name"), event.target.closest("[data-product-image]").getAttribute("data-product-image"), document.querySelector('[data-quantity-input]').value);
+            addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), event.target.closest("[data-product-name]").getAttribute("data-product-name"), event.target.closest("[data-product-image]").getAttribute("data-product-image"), event.target.closest("[data-product-price]").getAttribute("data-product-price"), document.querySelector('[data-quantity-input]').value);
         });
     }
 }
 
-function addToCart(product_id, name, imageUrl, quantity) {
+function addToCart(product_id, name, imageUrl, price, quantity) {
     console.log(parseInt(quantity));
     let product;
     let productAlreadyExists = false;
     if (quantity != null) {
         product = {
             id : product_id,
-            productName: name,
+            name: name,
             image : imageUrl,
-            quantityOfProduct : quantity
+            price : price,
+            quantity : quantity
         }
     } else {
          product = {
             id : product_id,
-            productName: name,
+            name: name,
             image : imageUrl,
-            quantityOfProduct : 1
+            price : price,
+            quantity : 1
         }
     }
     
@@ -47,7 +50,7 @@ function addToCart(product_id, name, imageUrl, quantity) {
                 return object.id === product_id;
             });
     
-            CART[index].quantityOfProduct = parseInt(parseInt(CART[index].quantityOfProduct) + parseInt(quantity));
+            CART[index].quantity = parseInt(parseInt(CART[index].quantity) + parseInt(quantity));
         } else {
             CART.push(product);
         }
@@ -57,7 +60,7 @@ function addToCart(product_id, name, imageUrl, quantity) {
                 return object.id === product_id;
             });
     
-            CART[index].quantityOfProduct = parseInt(parseInt(CART[index].quantityOfProduct) + 1);
+            CART[index].quantity = parseInt(parseInt(CART[index].quantity) + 1);
         } else {
             CART.push(product);
         }

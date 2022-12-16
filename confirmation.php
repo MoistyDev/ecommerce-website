@@ -2,14 +2,6 @@
     require_once "includes/functions/database.php";
 
     $db = db_connect();
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $country = $_POST['country'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $postalcode = $_POST['postalcode'];
-    $url = "orderConfirmed.php?firstname=$firstname&lastname=$lastname&email=$email&country=$country%address=$address&city=$city%postalcode=$postalcode";
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>
@@ -26,19 +18,19 @@
             <h1 class="question text-center">You are sure you want to order ?</h1>   
         </div>
         <div class="row">
-            <div class="col">
-                <a data-option="confirm" class="confirm-option-link text-end" href="<?=$url?>">
-                    <h3 class="confirm-option confirm">Confirm</h3>
-                </a>
+            <div class="col text-end">
+                <form action="orderConfirmed.php" method="post">
+                    <button type="submit" name="submit" data-option="confirm" class="btn confirm-option confirm" value="Confirm"><h3>Confirm</h3></button>
+                </form>
             </div>
             <div class="col">
-                <a class="confirm-option-link text-start" href="index.php">
-                    <h3 class="confirm-option cancel">Cancel</h3>
+                <a href="index.php">
+                    <h3 type="button" data-option="cancel" class="confirm-option cancel">Cancel</h3>
                 </a>
             </div>
         </div>
     </div>    
 
-    <?php require_once "includes/layouts/shared/footer.php" ?>
+    <?php require_once "includes/layouts/shared/footer.php"?>
     <?php pg_close($db); ?>
 </div>

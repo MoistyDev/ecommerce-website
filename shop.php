@@ -36,7 +36,7 @@
                             <p class="item-description text-center"><?=$row['description']?></p>
                         </div>
                         </div>
-                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-quantity-input="1" href="">
+                        <a data-cart-button="add-to-cart" data-product-id="<?=$row['product_id']?>" data-product-name="<?=$row['name']?>" data-product-image="<?=$row['image_url']?>" data-product-price="<?=$row['price']?>" data-quantity-input="1" href="">
                             <div class="row">
                                 <p class="item-price text-center"><?=$row['price']?> $</p>
                                 <div class="add-button text-center">

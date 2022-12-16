@@ -51,15 +51,15 @@ function addProducts() {
                 </div>
                 <div class="col align-self-center">
                     <div class="row">
-                        <h5 class="text-center">${product.productName}</h5>
+                        <h5 class="text-center">${product.name}</h5>
                     </div>
                     <div class="row shopping-options">
                         <div class="col-3 quantity-to-buy">
                             <label for="quantity">Quantity :</label>
-                            <input data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantityOfProduct}"> 
+                            <input data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantity}"> 
                         </div>
                         <div class="col-3 text-center cart-button remove-from-cart">
-                            <a data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.productName}" data-product-image="${product.image}" data-product-quantity="1" href="" >
+                            <a data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.name}" data-product-image="${product.image}" data-product-price="${product.price}" data-product-quantity="1" href="" >
                                 <img src="/public/images/remove_from_cart.png" alt="">
                             </a>
                         </div>

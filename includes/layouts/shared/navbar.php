@@ -14,7 +14,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/shop.php">Shop</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item cart-text">
           <a class="nav-link" href="/cart.php">Cart</a>
         </li>
       </ul>

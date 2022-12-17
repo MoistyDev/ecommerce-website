@@ -5,8 +5,8 @@ if (JSON.parse(localStorage.getItem('shoppingCart')) != null) {
     CART = [];
 }
 
-let htmlElem = $('[data-cart-body]');
-$(htmlElem).html("");
+let htmlElem = document.querySelector('[data-cart-body]');
+htmlElem.innerHTML = "";
 
 function initRemoveListeners() {
     const BUTTONS = $('[data-cart-button="remove-from-cart"]');
@@ -18,13 +18,13 @@ function initRemoveListeners() {
 }
 
 function initQuantityInputListeners() {
-    const FIELDS = $(['[data-quantity-input]']);
+    const FIELDS = $("[data-quantity-input]");
     for (let field of FIELDS) {
         $(field).change(function() {
             let index = CART.findIndex(object => {
                 return object.id === event.target.closest("[data-product-id]").getAttribute("data-product-id");
             });
-            CART[index].quantityOfProduct = field.value;
+            CART[index].quantity = field.value;
             localStorage.setItem('shoppingCart', JSON.stringify(CART));
         });
     }
@@ -35,6 +35,7 @@ function removeProduct(productId) {
         return object.id === productId;
     });
 
+    console.log(index);
     CART.splice(index, 1);
     localStorage.setItem('shoppingCart', JSON.stringify(CART));
 }

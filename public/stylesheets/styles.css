@@ -1,17 +1,21 @@
 :root {
     --main-color: #f48c8c;
+    --main-color-tr: rgba(174, 107, 123, 0.2);
     --text-color: white;
     --text-hover: #fac6c6;
+    --cart-hover: #a3b160;
 }
 
 html, body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
     color: wheat;
 }
 
 .title {
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    font-family: 'Amatic SC', cursive;
 }
 
 .content {
@@ -21,20 +25,29 @@ html, body {
 }
 
 .content .carousel {
-    height: auto;
-    width: 32rem;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    max-width: 32rem;
 }
 
 .content .carousel-control {
-    background-color: rgb(235, 229, 229);
+    background-color: var(--main-color-tr);
     border-radius: 5px;
 }
 
 .content .carousel-caption {
-    background-color: rgba(235, 229, 229, 0.5);
+    background-color: var(--main-color-tr);
     color: black;
+    border-radius: 3px;
+}
+
+.content .top-brands {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content .brand-title {
+    margin-top: 0.2rem;
 }
 
 .content .brand-logo {
@@ -42,7 +55,7 @@ html, body {
     height: auto;
     margin: 1rem;
     padding: 0.8rem;
-    background-color: rgba(235, 229, 229, 0.5);
+    background-color: var(--main-color-tr);
     border-radius: 5px;
 }
 
@@ -56,17 +69,15 @@ html, body {
 }
 
 .content .item {
-    margin: 2rem;
+    margin: 1rem;
     padding: 0.8rem;
     width: 200px;
-    border: 2px solid transparent
+    border: 2px solid transparent;
 }
 
 .content .item:hover {
-    filter: contrast(50%);
     border: 2px solid grey;
     border-radius: 5px;
-    
 }
 
 .content .products img {
@@ -78,8 +89,13 @@ html, body {
     color: black;
 }
 
+.content .item .item-name {
+    font-family: 'Indie Flower', cursive;
+}
+
 .content .item .item-info {
     height: 18rem;
+    font-family: 'Kulim Park', sans-serif;
 }
 
 .content .item img {
@@ -97,6 +113,7 @@ html, body {
     font-size: medium;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-family: 'Kulim Park', sans-serif;
 }
 
 .content .item .add-button {
@@ -112,7 +129,7 @@ html, body {
 
 .content .item .add-button:hover {
     filter: contrast(1);
-    background-color: rgb(4, 219, 4);
+    background-color: var(--cart-hover);
     border: 2px solid black;
     border-radius: 5px;
 }

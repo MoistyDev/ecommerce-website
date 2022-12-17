@@ -13,7 +13,6 @@
     }
 ?>
 <?php require_once "includes/layouts/shared/header.php" ?>
-
 <div class="content">
     <?php require_once "includes/layouts/shared/navbar.php" ?>
     <h3 class="title text-center">Shop All</h3>
@@ -21,7 +20,6 @@
         <div class="row row-cols-auto justify-content-center">
         <?php
             while ($row = pg_fetch_assoc($products)) {
-
         ?> 
             <div class="col item">
                 <div class="row item-info">

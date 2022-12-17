@@ -1,5 +1,6 @@
 :root {
     --main-color: #f48c8c;
+    --accent-color: #9f5b5b;
     --text-color: white;
     --text-hover: #fac6c6;
 }
@@ -60,8 +61,9 @@
     z-index: 9999;
 }
 
-.container-fluid {
+.navbar .container-fluid {
     background-color: var(--main-color);
+    border-bottom: 3px solid var(--accent-color) !important;
     font-family: 'Kulim Park', sans-serif;
 }
 

@@ -17,9 +17,6 @@
             <img src="/public/images/twitter-sign.png" alt="">
         </a>
       </div>
-        
-        
-       
     </div>
   </div>
 </div>

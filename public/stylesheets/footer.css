@@ -12,6 +12,12 @@
     padding: 1rem;
     color: var(--text-color);
     background-color: var(--main-color);
+    border-top: 3px solid var(--accent-color) !important;
+}
+
+.footer .container-fluid {
+    background-color: var(--main-color);
+    font-family: 'Kulim Park', sans-serif;
 }
 
 .icons {

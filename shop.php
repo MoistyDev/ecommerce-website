@@ -2,22 +2,24 @@
     require_once "includes/functions/database.php";
 
     $db = db_connect();
-    
+
     if (empty($_POST['searchInput'])) {
         $products = db_query($db, "select * from product p");
+        $title = "Shop All";
     } else {
         $search = $_POST['searchInput'];
         $searchLower = strtolower($search);
         $searchUpper = strtoupper($search);
         $sql = "select * from product where name ^@ '{$search}' or lower(name) ^@ '{$searchLower}' or upper(name) ^@ '{$searchUpper}'";
         $products = db_query($db, $sql);
+        $title = "Search Results for : $search";
     }
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>
 <div class="content">
     <?php require_once "includes/layouts/shared/navbar.php" ?>
-    <h3 class="title text-center">Shop All</h3>
+    <h3 class="title text-center"><?=$title?></h3>
     <div class="products">
         <div class="row row-cols-auto justify-content-center">
         <?php

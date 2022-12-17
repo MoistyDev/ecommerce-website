@@ -1,0 +1,92 @@
+:root {
+    --main-color: #f48c8c;
+    --main-color-tr: rgba(174, 107, 123, 0.2);
+    --accent-color: #9f5b5b;
+    --text-color: white;
+    --text-color-dark: black;
+    --text-hover: #fac6c6;
+    --cart-hover: #a3b160;
+    --remove-bg-color: #8a011f;
+}
+
+@media (max-width: 990px) {
+    .product .info {
+        padding-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .product .image {
+        padding-right: 1rem;
+    }
+}
+
+.product {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.product .info {
+    padding-top: 2rem;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.product .name {
+    font-family: 'Indie Flower', cursive;
+}
+
+.product .description {
+    margin-top: 4rem;
+}
+
+.product .quantity {
+    width: 5rem;
+    max-height: 33px;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+.product .shopping-options {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product .quantity-to-buy {
+    padding-top: 0.8rem;
+    max-width: 12rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.product .cart-button {
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    height: auto;
+    width: auto;
+    border: 3px solid transparent;
+    text-decoration: none;
+    color: var(--text-color-dark);
+}
+
+.product .add-to-cart {
+    border: 2px solid var(--main-color-tr);
+    background-color: white;
+    max-width: fit-content;
+}
+
+.product .add-to-cart:hover, .add-to-cart:focus-visible, .add-to-cart:active {
+    background-color: var(--cart-hover);
+    border: 2px solid black;
+}
+
+.product .remove-from-cart {
+    background-color: var(--remove-bg-color);
+    border: 3px solid transparent;
+}
+
+.product .remove-from-cart:hover, .remove-from-cart:focus-visible, .remove-from-cart:active {
+    border: 3px solid black;
+    filter: saturate(85%);
+}

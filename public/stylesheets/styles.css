@@ -1,4 +1,140 @@
-/* TODO: Remove the sample code to test the CSS is correctly linked  */
-body {
-    background-color: aqua;
+:root {
+    --main-color: #f48c8c;
+    --main-color-tr: rgba(174, 107, 123, 0.2);
+    --text-color: white;
+    --text-hover: #fac6c6;
+    --cart-hover: #a3b160;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    color: wheat;
+}
+
+.title {
+    padding-top: 1rem;
+    font-family: 'Amatic SC', cursive;
+}
+
+.content {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 84px;
+}
+
+.content .carousel {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 32rem;
+}
+
+.content .carousel-control {
+    background-color: var(--main-color-tr);
+    border-radius: 5px;
+}
+
+.content .carousel-caption {
+    background-color: var(--main-color-tr);
+    color: black;
+    border-radius: 3px;
+}
+
+.content .top-brands {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content .brand-title {
+    margin-top: 0.2rem;
+}
+
+.content .brand-logo {
+    width: 150px;
+    height: auto;
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: var(--main-color-tr);
+    border-radius: 5px;
+}
+
+.content .brand-logo:hover, .brand-logo:focus-visible, .brand-logo:active {
+    opacity: 0.7;
+}
+
+.item .item-img img{
+    height: auto;
+    width: 50px;
+}
+
+.content .item {
+    margin: 1rem;
+    padding: 0.8rem;
+    width: 200px;
+    border: 2px solid transparent;
+}
+
+.content .item:hover, .item:focus-visible, .item:active {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.content .products img {
+    padding-bottom: 0.8rem;
+}
+
+.content .products a{
+    text-decoration: none;
+    color: black;
+}
+
+.content .item .item-name {
+    font-family: 'Indie Flower', cursive;
+}
+
+.content .item .item-info {
+    height: 18rem;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.content .item img {
+    width: 100px;
+    height: auto;
+}
+
+.content .item .item-description {
+    padding-top: 0.5rem;
+    font-size: small;
+}
+
+.content .item .item-price {
+    padding-top: 0.5rem;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.content .item .add-button {
+    background-color: var(--main-color-tr);
+    border-radius: 5px;
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    margin: 0 auto;
+    border: 2px solid transparent;
+}
+
+.content .item .add-button:hover, .add-button:focus-visible, .add-button:active {
+    filter: contrast(1);
+    background-color: var(--cart-hover);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.content .item .add-button img {
+    height: auto;
+    width: 30px;
 }

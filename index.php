@@ -7,10 +7,10 @@
     join top_product tp on tp.product_id = p.product_id 
     where p.product_id in (select * from top_product)");
 ?>
+
 <?php require_once "includes/layouts/shared/header.php" ?>
 <div class="content">
     <?php require_once "includes/layouts/shared/navbar.php" ?>
-    
     <div class="row">
         <div class="col">
             <h3 class="title text-center">Our top sellers</h3>

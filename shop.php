@@ -2,6 +2,7 @@
     require_once "includes/functions/database.php";
 
     $db = db_connect();
+    
     if (empty($_POST['searchInput'])) {
         $products = db_query($db, "select * from product p");
     } else {
@@ -12,6 +13,7 @@
         $products = db_query($db, $sql);
     }
 ?>
+
 <?php require_once "includes/layouts/shared/header.php" ?>
 <div class="content">
     <?php require_once "includes/layouts/shared/navbar.php" ?>

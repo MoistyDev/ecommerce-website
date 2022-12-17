@@ -28,7 +28,6 @@
     <?php
       if ($_SERVER['REQUEST_URI'] == '/form.php') echo '<script type="module" src="./public/javascripts/form.js"></script>'
     ?>
-
 </head>
 <body>
 

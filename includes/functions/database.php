@@ -1,5 +1,4 @@
 <?php
-
 $host = getenv("DB_HOSTNAME");
 $port = "5432";
 $databaseName = getenv("DB_NAME");

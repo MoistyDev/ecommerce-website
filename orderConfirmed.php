@@ -1,14 +1,10 @@
 <?php
     require_once "includes/functions/database.php";
-/*
-    id
-    productName
-    image
-    quantityOfProduct
-*/
+
     $db = db_connect();
     $orderId = $_GET['orderID'];
     $cart = json_decode($_POST["cart"]);
+
     foreach($cart as $product) {
         $productId = $product->id;
         $name = $product->name;
@@ -24,7 +20,7 @@
   <?php require_once "includes/layouts/shared/navbar.php" ?>
   <div class="confirmed-order d-flex flex-column align-items-center justify-content-center">
     <h3 class="title order-confirmation text-center">Order #<?=$orderId?> Confirmed !</h3>
-    <a class="homepage-button align-middle text-center " href="index.php"><h5>Go back to homepage</h5></a>
+    <a data-redirect-button="homepage" class="homepage-button align-middle text-center " href="index.php"><h5>Go back to homepage</h5></a>
   </div>
   <?php require_once "includes/layouts/shared/footerbar.php" ?>
 </div>

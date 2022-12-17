@@ -35,6 +35,15 @@ function loadTotal() {
     });
 }
 
+function emptyCartOnConfirm() {
+    $('[data-button-type="submit"]').click(function() {
+        $(window).on('beforeunload', function() {
+            localStorage.clear();
+        });
+    });
+}
+
 emailIsNew();
 loadCartItems();
 loadTotal();
+emptyCartOnConfirm();

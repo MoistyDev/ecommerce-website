@@ -6,9 +6,9 @@ if (JSON.parse(localStorage.getItem('shoppingCart')) != null) {
 }
 
 function initCartButtonListeners() {
-    const BUTTONS = document.querySelectorAll('[data-cart-button="add-to-cart"]');
+    const BUTTONS = $('[data-cart-button="add-to-cart"]');
     for (let button of BUTTONS) {
-        button.addEventListener('click', function() {
+        $(button).click(function() {
             console.log("test");
             event.preventDefault();
             addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), event.target.closest("[data-product-name]").getAttribute("data-product-name"), event.target.closest("[data-product-image]").getAttribute("data-product-image"), event.target.closest("[data-product-price]").getAttribute("data-product-price"), document.querySelector('[data-quantity-input]').value);
@@ -66,6 +66,7 @@ function addToCart(product_id, name, imageUrl, price, quantity) {
         }
     }
 
+    localStorage.clear();
     localStorage.setItem('shoppingCart', JSON.stringify(CART));
 }
 

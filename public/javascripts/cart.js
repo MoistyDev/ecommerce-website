@@ -5,6 +5,8 @@ if (JSON.parse(localStorage.getItem('shoppingCart')) != null) {
     CART = [];
 }
 
+
+
 let htmlElem = document.querySelector('[data-cart-body]');
 htmlElem.innerHTML = "";
 
@@ -42,32 +44,69 @@ function removeProduct(productId) {
 }
 
 function addProducts() {
-    for (let product of CART) {
-        htmlElem.innerHTML += `
-        <div class="product cart-product justify-content-center">
-            <div class="row">
-                <div class="col-3 product-image">
-                    <img class="cart-img" src="${product.image}" alt="">
-                </div>
-                <div class="col align-self-center">
+    if (CART.length == 0) {
+        htmlElem.innerHTML += `<h3 class="empty-cart-message d-flex align-items-center justify-content-center">Your cart is empty</h3>`
+    } else {
+        for (let product of CART) {
+            if (CART.indexOf(product) == CART.length - 1) {
+                htmlElem.innerHTML += `
+                <div class="product cart-product justify-content-center">
                     <div class="row">
-                        <h5 class="text-center">${product.name}</h5>
-                    </div>
-                    <div class="row shopping-options">
-                        <div class="col-3 quantity-to-buy">
-                            <label for="quantity">Quantity :</label>
-                            <input data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantity}"> 
+                        <div class="col product-image d-flex justify-content-center">
+                            <img class="cart-img" src="${product.image}" alt="">
                         </div>
-                        <div class="col-3 text-center cart-button remove-from-cart">
-                            <a data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.name}" data-product-image="${product.image}" data-product-price="${product.price}" data-product-quantity="1" href="" >
-                                <img src="/public/images/remove_from_cart.png" alt="">
-                            </a>
+                        <div class="col align-self-center">
+                            <div class="row name cart-product-name">
+                                <h5 class="text-center">${product.name}</h5>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="input-group quantity-to-buy">
+                                    <span class="input-group-text" id="">Quantity</span>
+                                    <input class="form-control" data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantity}"> 
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <a class="cart-button remove-from-cart text-center" data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.name}" data-product-image="${product.image}" data-product-price="${product.price}" data-product-quantity="1" href="" >
+                                    <img src="/public/images/remove_from_cart.png" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        `;
+                <a class="checkout-link" href="form.php">
+                    <div class="buy-button cart-button checkout">
+                        <h5>Checkout</h5>
+                    </div>
+                </a>
+                `
+            } else {
+                htmlElem.innerHTML += `
+                <div class="product cart-product justify-content-center">
+                    <div class="row">
+                        <div class="col product-image d-flex justify-content-center">
+                            <img class="cart-img" src="${product.image}" alt="">
+                        </div>
+                        <div class="col align-self-center">
+                            <div class="row name cart-product-name">
+                                <h5 class="text-center">${product.name}</h5>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="input-group quantity-to-buy">
+                                    <span class="input-group-text" id="">Quantity</span>
+                                    <input class="form-control" data-product-id="${product.id}" data-quantity-input="" type="number" class="quantity" name="quantity" min="1" value="${product.quantity}"> 
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <a class="cart-button remove-from-cart text-center" data-cart-button="remove-from-cart" data-product-id="${product.id}" data-product-name="${product.name}" data-product-image="${product.image}" data-product-price="${product.price}" data-product-quantity="1" href="" >
+                                    <img src="/public/images/remove_from_cart.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }
+        }
     }
 }
 

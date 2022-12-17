@@ -11,7 +11,7 @@
     <?php require_once "includes/layouts/shared/navbar.php" ?>
     <div class="product">
         <div class="row">
-            <div class="col image">
+            <div class="col image d-flex justify-content-center">
                 <img class="" src="<?=$row['image_url'] ?>" alt="">
             </div>
             <div class="col info">

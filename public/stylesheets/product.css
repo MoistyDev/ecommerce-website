@@ -5,6 +5,7 @@
     --text-color: white;
     --text-hover: #fac6c6;
     --cart-hover: #a3b160;
+    --remove-bg-color: #8a011f;
 }
 
 @media (max-width: 990px) {
@@ -15,13 +16,6 @@
 
     .product .image {
         padding-right: 1rem;
-    }
-}
-
-@media (min-width: 991px) {
-    .product {
-        margin-left: 8rem;
-        margin-right: 8rem;
     }
 }
 
@@ -87,5 +81,11 @@
 }
 
 .product .remove-from-cart {
-    background-color: rgb(165, 2, 2);
+    background-color: var(--remove-bg-color);
+    border: 3px solid transparent;
+}
+
+.product .remove-from-cart:hover {
+    border: 3px solid black;
+    filter: saturate(85%);
 }

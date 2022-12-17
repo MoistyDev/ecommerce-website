@@ -20,14 +20,13 @@
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/index.php">Kiwi's Supply Shop - Order #<?=$orderId?> Confirmed</a>
-  </div>
-</nav>
 <div class="content">
-
-<?php require_once "includes/layouts/shared/footerbar.php" ?>
+  <?php require_once "includes/layouts/shared/navbar.php" ?>
+  <div class="confirmed-order d-flex flex-column align-items-center justify-content-center">
+    <h3 class="title order-confirmation text-center">Order #<?=$orderId?> Confirmed !</h3>
+    <a class="homepage-button align-middle text-center " href="index.php"><h5>Go back to homepage</h5></a>
+  </div>
+  <?php require_once "includes/layouts/shared/footerbar.php" ?>
 </div>
 <?php require_once "includes/layouts/shared/footer.php" ?>
 <?php pg_close($db); ?>

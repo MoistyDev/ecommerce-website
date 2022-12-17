@@ -75,6 +75,7 @@ input[type=number] {
     border-radius: 5px;
     border: 2px solid var(--main-color-tr);
     width: 10rem;
+    font-family: 'Amatic SC', cursive;
 }
 
 .content .confirm-form:hover {

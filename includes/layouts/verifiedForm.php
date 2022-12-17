@@ -37,10 +37,10 @@
                 </div>
                 <div class="row d-flex justify-content-center">
                     <div class="input-group">
-                                <span class="input-group-text" id="">City</span>
-                                <input data-field-type="city" type="text" name="city" class="form-control city" value="<?=$city?>" disabled>
-                            </div>
-                            <div class="field-verification verified">* Verified</div>
+                        <span class="input-group-text" id="">City</span>
+                        <input data-field-type="city" type="text" name="city" class="form-control city" value="<?=$city?>" disabled>
+                    </div>
+                    <div class="field-verification text-center verified">* Verified</div>
                     </div>
                 <div class="row d-flex justify-content-center">
                     <div class="input-group">

@@ -1,0 +1,35 @@
+:root {
+    --main-color: #f48c8c;
+    --main-color-tr: rgba(174, 107, 123, 0.2);
+    --accent-color: #9f5b5b;
+    --text-color: white;
+    --text-hover: #fac6c6;
+    --cart-hover: #a3b160;
+    --remove-bg-color: #8a011f;
+}
+
+.confirmed-order {
+    height: 12rem;
+}
+
+.order-confirmation {
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+}
+
+.homepage-button {
+    color: black;
+    background-color: white;
+    border: 2px solid var(--main-color-tr);
+    border-radius: 5px;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+}
+
+.homepage-button:hover {
+    color: white;
+    background-color: var(--main-color);
+    border: 2px solid var(--accent-color);
+}

@@ -9,7 +9,6 @@ function initCartButtonListeners() {
     const BUTTONS = $('[data-cart-button="add-to-cart"]');
     for (let button of BUTTONS) {
         $(button).click(function() {
-            console.log("test");
             event.preventDefault();
             addToCart(event.target.closest("[data-product-id]").getAttribute("data-product-id"), event.target.closest("[data-product-name]").getAttribute("data-product-name"), event.target.closest("[data-product-image]").getAttribute("data-product-image"), event.target.closest("[data-product-price]").getAttribute("data-product-price"), document.querySelector('[data-quantity-input]').value);
         });
@@ -17,7 +16,6 @@ function initCartButtonListeners() {
 }
 
 function addToCart(product_id, name, imageUrl, price, quantity) {
-    console.log(parseInt(quantity));
     let product;
     let productAlreadyExists = false;
     if (quantity != null) {

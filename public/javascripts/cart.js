@@ -35,7 +35,6 @@ function removeProduct(productId) {
         return object.id === productId;
     });
 
-    console.log(index);
     CART.splice(index, 1);
     localStorage.setItem('shoppingCart', JSON.stringify(CART));
 }

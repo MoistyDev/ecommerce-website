@@ -3,6 +3,7 @@
     --main-color-tr: rgba(174, 107, 123, 0.2);
     --accent-color: #9f5b5b;
     --text-color: white;
+    --text-color-dark: black;
     --text-hover: #fac6c6;
     --cart-hover: #a3b160;
     --remove-bg-color: #8a011f;
@@ -66,7 +67,7 @@
     width: auto;
     border: 3px solid transparent;
     text-decoration: none;
-    color: black;
+    color: var(--text-color-dark);
 }
 
 .product .add-to-cart {

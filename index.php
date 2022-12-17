@@ -48,7 +48,7 @@
             <h3 class="title brand-title text-center">Our Top Brands</h3>
             <div class="top-brands d-flex">
                 <div class="col brands text-center justify-content-center">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <a href="">
                             <img class="brand-logo" src="/public/images/hagen-tr.png" alt="">
                         </a>

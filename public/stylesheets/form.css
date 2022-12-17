@@ -3,6 +3,7 @@
     --main-color-tr: rgba(174, 107, 123, 0.2);
     --accent-color: #9f5b5b;
     --text-color: white;
+    --text-color-dark: black;
     --text-hover: #fac6c6;
     --cart-hover: #a3b160;
     --remove-bg-color: #8a011f;
@@ -47,19 +48,15 @@
 
 input:active, input:focus {
     outline:0px !important;
-    -webkit-appearance:none;
+    appearance:none;
     box-shadow: none !important;
     border: 1px solid var(--accent-color) !important;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
 }
 
 .content .btn-group {
@@ -70,7 +67,7 @@ input[type=number] {
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding: 0.5rem;
-    color: black;
+    color: var(--text-color-dark);
     background-color: white;
     border-radius: 5px;
     border: 2px solid var(--main-color-tr);
@@ -83,7 +80,7 @@ input[type=number] {
 }
 
 .content .confirm-order {
-    color: white;
+    color: var(--text-color);
     background-color: var(--cart-hover);
 }
 
@@ -98,9 +95,9 @@ input[type=number] {
 }
 
 .error {
-    color: red;
+    color: var(--remove-bg-color);
 }
 
 .verified {
-    color : green;
+    color : var(--cart-hover);
 }

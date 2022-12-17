@@ -56,7 +56,7 @@
 .navbar {
     height: 5rem;
     margin-bottom: 2rem;
-    color: white;
+    color: var(--text-color);
     background-color: var(--main-color);
     z-index: 9999;
 }

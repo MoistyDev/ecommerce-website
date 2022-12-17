@@ -80,7 +80,7 @@
     color: var(--text-color);
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover, .nav-link:focus-visible, .nav-link:active {
     color: var(--text-hover);
 }
 
@@ -96,6 +96,6 @@
     filter: invert();
 }
 
-.navbar .shopping-cart-logo:hover {
+.navbar .shopping-cart-logo:hover, .shopping-cart-logo:focus-visible, .shopping-cart-logo:active {
     filter: contrast(75%);
 }

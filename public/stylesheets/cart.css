@@ -44,7 +44,7 @@
     font-family: 'Amatic SC', cursive;
 }
 
-.content .checkout:hover {
+.content .checkout:hover, .checkout:focus-visible, .checkout:active {
     background-color: var(--checkout-bg-color);
     border: 2px solid black;
 }

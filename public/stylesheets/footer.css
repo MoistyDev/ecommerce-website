@@ -34,6 +34,6 @@
     filter: invert();
 }
 
-.icons a:hover {
+.icons a:hover, a:focus-visible, a:active {
     filter: opacity(0.6);
 }

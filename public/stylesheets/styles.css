@@ -59,7 +59,7 @@ html, body {
     border-radius: 5px;
 }
 
-.content .brand-logo:hover {
+.content .brand-logo:hover, .brand-logo:focus-visible, .brand-logo:active {
     opacity: 0.7;
 }
 
@@ -75,7 +75,7 @@ html, body {
     border: 2px solid transparent;
 }
 
-.content .item:hover {
+.content .item:hover, .item:focus-visible, .item:active {
     border: 2px solid grey;
     border-radius: 5px;
 }
@@ -127,7 +127,7 @@ html, body {
     border: 2px solid transparent;
 }
 
-.content .item .add-button:hover {
+.content .item .add-button:hover, .add-button:focus-visible, .add-button:active {
     filter: contrast(1);
     background-color: var(--cart-hover);
     border: 2px solid black;

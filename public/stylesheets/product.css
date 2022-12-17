@@ -76,7 +76,7 @@
     max-width: fit-content;
 }
 
-.product .add-to-cart:hover {
+.product .add-to-cart:hover, .add-to-cart:focus-visible, .add-to-cart:active {
     background-color: var(--cart-hover);
     border: 2px solid black;
 }
@@ -86,7 +86,7 @@
     border: 3px solid transparent;
 }
 
-.product .remove-from-cart:hover {
+.product .remove-from-cart:hover, .remove-from-cart:focus-visible, .remove-from-cart:active {
     border: 3px solid black;
     filter: saturate(85%);
 }

@@ -46,7 +46,7 @@
     color: black;
 }
 
-input:active, input:focus {
+input:active, input:focus-visible .input:active {
     outline:0px !important;
     appearance:none;
     box-shadow: none !important;
@@ -75,7 +75,7 @@ input::-webkit-inner-spin-button {
     font-family: 'Amatic SC', cursive;
 }
 
-.content .confirm-form:hover {
+.content .confirm-form:hover, .confirm-form:focus-visible, .confirm-form:active {
     background-color: var(--main-color);
 }
 
@@ -84,7 +84,7 @@ input::-webkit-inner-spin-button {
     background-color: var(--cart-hover);
 }
 
-.content .confirm-order:hover {
+.content .confirm-order:hover, .confirm-order:focus-visible, .confirm-order:active {
     filter: contrast(50%);
     
 }

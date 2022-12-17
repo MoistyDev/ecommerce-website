@@ -18,8 +18,25 @@
     }
 }
 
+@media (min-width: 991px) {
+    .product {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+}
+
+.product {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
 .product .info {
     padding-top: 2rem;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.product .name {
+    font-family: 'Indie Flower', cursive;
 }
 
 .product .description {

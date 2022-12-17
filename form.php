@@ -49,37 +49,37 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["firstname"])) {
-            $firstnameError = "First name is required";
+            $firstnameError = "* First name is required";
         } else {
             $firstname = ($_POST["firstname"]);
         }
         if(empty($_POST["lastname"])) {
-            $lastnameError = "Last name is required";
+            $lastnameError = "* Last name is required";
         } else {
             $lastname = ($_POST["lastname"]);
         }
         if(empty($_POST["email"])) {
-            $emailError = "Email is required";
+            $emailError = "* Email is required";
         } else {
             $email = ($_POST["email"]);
         }
         if (empty($_POST["address"])) {
-            $addressError = "Address is required";
+            $addressError = "* Address is required";
         } else {
             $address = ($_POST["address"]);
         }
         if(empty($_POST["country"])) {
-            $countryError = "Country is required";
+            $countryError = "* Country is required";
         } else {
             $country = ($_POST["country"]);
         }
         if (empty($_POST["city"])) {
-            $cityError = "City is required";
+            $cityError = "* City is required";
         } else {
             $city = ($_POST["city"]);
         }
         if (empty($_POST["postalcode"])) {
-            $postalCodeError = "Postal Code is required";
+            $postalCodeError = "* Postal Code is required";
         } else {
             $postalCode = ($_POST["postalcode"]);
         }
@@ -87,11 +87,7 @@
 ?>
 
 <?php require_once "includes/layouts/shared/header.php" ?>
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand text-center" href="/index.php">Kiwi's Supply Shop - Billing information</a>
-  </div>
-</nav>
+<?php require_once "includes/layouts/shared/navbar.php" ?>
 <?php 
     if ($verified) {
         require_once "includes/layouts/verifiedForm.php";
@@ -99,7 +95,5 @@
         require_once "includes/layouts/unverifiedForm.php";
     }
 ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php require_once "includes/layouts/shared/footer.php"; ?>
 <?php pg_close($db); ?>

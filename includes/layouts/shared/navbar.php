@@ -32,7 +32,7 @@
 </nav>
 
 <?php
-  if(isset($_POST['submit'])) {
+  if(isset($_POST['submit']) && !empty($_POST['submit'])) {
     $search = $_POST['searchInput'];
     $url = "shop.php?search=".$search;
   }

@@ -1,45 +1,55 @@
-@media only screen and (max-width: 767px) {
+:root {
+    --main-color: #f48c8c;
+    --main-color-tr: rgba(174, 107, 123, 0.2);
+    --accent-color: #9f5b5b;
+    --text-color: white;
+    --text-hover: #fac6c6;
+    --cart-hover: #a3b160;
+    --remove-bg-color: #8a011f;
+}
+
+@media only screen and (max-width: 990px) {
     .content input {
         max-width: 12rem;
     }
-}
-
-:root {
-    --body-background-color: #202124;
-    --content-background-color: #303134;
-    --text-color: #f6f6f6;
-    --textfield-background-color: #e3e4e6;
-    --label-background-color: #6c757d;
 }
 
 .content h1, h5 {
     margin-bottom: 2.5rem;
 }
 
-.content .input-group {
-    margin-bottom: 1.5rem;
-    white-space: nowrap;
+.content .subtitle {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Indie Flower', cursive;
 }
 
-.navbar .search-bar {
-    padding-top: 1.5rem;
+.content .input-group {
+    white-space: nowrap;
+    margin-top: 1rem;
+    font-family: 'Kulim Park', sans-serif;
+    width: fit-content;
 }
 
 .content .input-group-text {
     color: var(--text-color);
-    background-color: var(--label-background-color);
-    border: 1px solid black;
+    background-color: var(--text-hover);
 }
 
 .content input {
     color: black;
-    background-color: var(--textfield-background-color);
-    border: 1px solid black;
+    background-color: var(--main-color-tr);
 }
 
-.content input:focus {
+.content input:active {
     color: black;
-    background-color: var(--textfield-background-color);
+}
+
+input:active, input:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border: 1px solid var(--accent-color) !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -52,54 +62,44 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.content .input-group {
-    white-space: nowrap;
-}
-
 .content .btn-group {
     margin-bottom: 1.5rem;
 }
 
-.content .address {
-    width: 15rem;
-}
-
-.content .city {
+.content .submit {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid var(--main-color-tr);
     width: 10rem;
 }
 
-.content .postal-code {
-    width: 5.1rem;
-}
-
-.content .name {
-    width: 15rem;
-}
-
-.content .email {
-    width: 20rem;
-}
-
-.content .submit {
-    margin-top: 3rem;
-    color: var(--text-color);
-}
-
-
-.content .confirm-form {
-    background-color: var(--label-background-color);
+.content .confirm-form:hover {
+    background-color: var(--main-color);
 }
 
 .content .confirm-order {
-    background-color: green;
+    color: white;
+    background-color: var(--cart-hover);
+}
+
+.content .confirm-order:hover {
+    filter: contrast(50%);
+    
+}
+
+.field-verification {
+    font-family: 'Kulim Park', sans-serif;
+    padding-top: 0.2rem;
 }
 
 .error {
-    padding-left: 0.5rem;
     color: red;
 }
 
 .verified {
-    padding-left: 0.5rem;
     color : green;
 }
